@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Buildcareer</title>
+    <link rel="stylesheet" href="style.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/android-chrome-192x192.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="header"><!--div for header  -->
+        
+        <div><!--div for home button  -->
+            <button  type="reset"  class="home-btn"><img src="build_img.png" alt="image not found"></button>
+        </div>
+
+
+        <div class="search-box"><!--div for search box  -->
+            <input type="text" placeholder="Search jobs here"></button>
+            <button type="submit"><i class='bx bx-search'></i></button> 
+        </div>
+
+        <a id="hideonmobil" href="#">InternShip<i class='bx bx-chevron-down'></i></a>
+        <a id="hideonmobil" href="#">Jobs<i class='bx bx-chevron-down'></i></a>     
+        <a id="hideonmobil" href="#"><i class='bx bxs-lock'></i>Login</a>
+        <a id="hideonmobil" href="#">Institutes&Courses<i class='bx bx-chevron-down'></i></a>
+        <a id="hideonmobil" href="#"><i class='bx bxs-user'></i>Register</a></span>
+        <a id="hideonmobil" href="#">Post Jobs</a> 
+        <i onclick="showmenubar()" class='bx bx-menu' id="menu-icon"></i>
+        <ul class="menu-bar">
+            <li><a href="#">InternShip<i class='bx bx-chevron-down'></i></a></li>
+            <li><a href="#">Jobs<i class='bx bx-chevron-down'></i></a></li>     
+            <li><a href="#"><i class='bx bxs-lock'></i>Login</a></li>    
+            <li><a href="#">Institutes&Courses<i class='bx bx-chevron-down'></i></a></li>
+            <li><a href="#"><i class='bx bxs-user'></i>Register</a></span></li>
+            <li><a href="#">Post Jobs</a></li>   
+        </ul>  
+    </div><!--End of header div  -->
+    
+    <div class="register_container"><!-- div for register box -->
+
+        <div class="register-heading"><!-- div for register heading -->
+            <i class='bx bxs-user'></i>
+            <span>Register here</span>
+        </div>
+
+        <form id="form" action="main.html" method="get"><!--start of form-->
+
+           <table><!-- start of table-->
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="username">UserName</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for username input -->
+                        <input id="username"  onformchange="removeerror()" type="text" name="username" placeholder="Fullname"> 
+                        <div class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;"> 
+                    <label for="Email">Email</label>
+                    <span id="input-span">:</span></td>
+                <td> 
+                    <div class="input-div"><!-- div for email input -->
+                         <input id="email" type="text" name="email" placeholder="Enter your email">                            
+                         <div class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="Password">Password</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for password input -->
+                            <input id="password" type="password" placeholder="Enter password"> 
+                            <i id="pass-icon" onclick="show()" class='bx bxs-show'></i> 
+                            <div class="error"></div>
+                    </div>                           
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="confirm password">Confirm Password</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for confirm password input -->
+                            <input id="confirm-password" type="password" placeholder="confirm password">    
+                            <i id="confirm-pass-icon" onclick="confirm_show()" class='bx bxs-show'></i>
+                            <div class="error"></div>
+                    </div>                 
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;"> 
+                    <label for="Mobile">Mobile</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for number input -->
+                        <input id="number" type="text" placeholder="Enter Mobile number"> 
+                        <div class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="CurrentCity">Current City</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for city input -->
+                        <select id="city" name="Select CureentCity" >
+                            <option>Select your city</option>
+                            <option>Bengaluru</option>
+                            <option>Davanger </option>
+                            <option>Hyderabad</option>
+                            <option>Mumbai</option>
+                            <option>Lucknow</option>
+                            <option>Kolkata</option>
+                            <option>Kochi</option>
+                            <option>chitradurga </option>
+                            <option>hariara</option>
+                            <option>jagalur</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="">Highest Qualification</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td> 
+                    <div class="input-div"><!-- div for qualification input -->
+                        <select id="qualification"  placeholder="Enter Qualification">
+                             <Option>Select one Qualification</Option>
+                             <Option>MCA</Option>
+                             <Option>MBA</Option>
+                             <Option>BE</Option>
+                             <Option>BA</Option>    
+                             <Option>MTec</Option>    
+                             <Option>BCom</Option>    
+                             <Option>BSc</Option>    
+                             <Option>BSc Ag</Option>    
+                             <Option>B.Tec</Option>    
+                             <Option>BFA</Option>    
+                             <Option>MSE</Option>    
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="">Upload Resume</label>
+                    <span id="input-span">:</span>
+                </td>
+                <td>
+                    <div class="input-div"><!-- div for file input -->
+                        <input  type="file">
+                        <div class="error"></div>
+                    </div>
+                </td>                      
+            </tr>
+            </table><!-- end of table -->
+
+            <div class="last-submit"><!-- div for last submit checkbox -->
+                <input class="checkbox-whatsapp" type="checkbox">
+                <span>Contect me vie</span>
+                <i class='bx bxl-whatsapp-square' style='color:#32c51d'  ></i>
+                <span>whatsapp</span>
+            </div>
+                
+            <button  id="submit-btn"  type="submit">Submit</button>
+
+        </form> <!--end of form  -->
+
+    </div>    <!--end of register box  -->        
+</body>
+</html>
